@@ -18,5 +18,8 @@
     <ClCompile Include="Lab1_Problem1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="numberGridPaths.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
