@@ -2,12 +2,16 @@
 #include <String>
 #include <mutex>
 #include <fstream>
+#include <thread>
 
 #define N 9
 using namespace std;
 
 fstream outFile;
 fstream inFile;
+
+mutex outFileMutex;
+mutex inFileMutex;
 
 int grid[N][N] = {
    {3, 0, 6, 5, 0, 8, 4, 0, 0},
@@ -32,7 +36,6 @@ bool readFile(int(&grid)[N][N], fstream& inFile)
 	char buf[1024] = {0};
 	while (inFile.getline(buf, sizeof(buf)))
 	{
-
 		if (isdigit(buf[0]))
 		{
 			for (int i = 0; i < N; i++)
@@ -49,32 +52,32 @@ bool readFile(int(&grid)[N][N], fstream& inFile)
 	}
 	return true;
 }
-bool writeFile(int(&grid)[N][N], fstream& outFile)
+bool writeFile(const int(&grid)[N][N], fstream& outFile, mutex& outFileMutex)
 {
+
 	if (!outFile.is_open())
 	{
 		cout << "file open fail!";
 		return false;
 	}
-	int rowNum = 0;
-	char buf[1024] = { 0 };
-	while (inFile.getline(buf, sizeof(buf)))
-	{
 
-		if (isdigit(buf[0]))
+	for (int row = 0; row < N; row++)
+	{
+		for (int col = 0; col < N; col++)
 		{
+			if (col == 3 || col == 6)
+				outFile << " | ";
+			outFile << grid[row][col] << " ";
+		}
+		if (row == 2 || row == 5)
+		{
+			outFile << endl;
 			for (int i = 0; i < N; i++)
-			{
-				grid[rowNum][i] = static_cast<int>(buf[i]) - '0';
-			}
-			//grid[rowNum][N] = '/0';
-			rowNum += 1;
+				outFile << "---";
 		}
-		if (rowNum == N)
-		{
-			break;
-		}
+		outFile << endl;
 	}
+
 	return true;
 }
 bool isPresentInCol(int col, int num)
@@ -150,12 +153,13 @@ bool solveSudoku()
 	}
 	return false;
 }
-int main()
-{
-	inFile.open("input_sudoku.txt", ios::in);
 
-	for (int i = 0; i < N; i++)
+void solveThread(int (&grid)[N][N], fstream& inFile, fstream& outFile, mutex& inFileMutex, mutex& outFileMutex)
+{
+	while (inFile.peek() != EOF)
 	{
+
+		inFileMutex.lock();
 		if (readFile(grid, inFile))
 		{
 			for (int i = 0; i < N; i++)
@@ -166,11 +170,35 @@ int main()
 				}
 				cout << endl;
 			}
-			if (solveSudoku() == true)
-				sudokuGrid();
-			else
-				cout << "No solution exists";
 		}
+		inFileMutex.unlock();
+
+		if (solveSudoku() == true)
+			sudokuGrid();
+		else
+			cout << "No solution exists";
+
+		outFileMutex.lock();
+		writeFile(grid, outFile, outFileMutex);
+		outFileMutex.unlock();
+
 	}
-	inFile.close();
 }
+
+int main()
+{
+	inFile.open("input_sudoku.txt", ios::in);
+	outFile.open("result.txt", ios::out);
+
+	int numThread = 5;
+
+	thread t1(solveThread, ref(grid), ref(inFile), ref(outFile), ref(inFileMutex), ref(outFileMutex));
+	//thread t2(solveThread, ref(grid), ref(inFile), ref(outFile), ref(inFileMutex), ref(outFileMutex));
+
+	t1.join();
+	//t2.join();
+	
+	inFile.close();
+	outFile.close();
+}
+
