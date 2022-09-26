@@ -1,5 +1,2 @@
 ﻿  Problem2.cpp
-C:\Users\ASUS\Documents\6122\Labs\Lab1\Problem2\Problem2\Problem2.cpp(77,27): error C2065: 'N': undeclared identifier
-C:\Users\ASUS\Documents\6122\Labs\Lab1\Problem2\Problem2\Problem2.cpp(84,27): error C2065: 'N': undeclared identifier
-C:\Users\ASUS\Documents\6122\Labs\Lab1\Problem2\Problem2\Problem2.cpp(100,23): error C2065: 'N': undeclared identifier
-C:\Users\ASUS\Documents\6122\Labs\Lab1\Problem2\Problem2\Problem2.cpp(101,24): error C2065: 'N': undeclared identifier
+  Problem2.vcxproj -> C:\Users\ASUS\Documents\6122\Labs\Lab1\Problem2\Problem2\x64\Debug\Problem2.exe

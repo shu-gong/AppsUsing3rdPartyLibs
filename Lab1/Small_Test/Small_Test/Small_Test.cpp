@@ -5,18 +5,12 @@
 #include <fstream>
 using namespace std;
 
-fstream inFile;
 
 
 int main()
 {
-	inFile.open("input_sudoku.txt", ios::in);
-	if (inFile.fail())
-	{
-		cout << "1";
-	}
-	inFile.close();
-	cout << "sucessful";
+	int a[2] = { 1,2 };
+	cout << a[1];
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

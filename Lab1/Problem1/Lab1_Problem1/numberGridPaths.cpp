@@ -1,10 +1,28 @@
+/*
+Author: Shu Gong
+Class: ECE6122 QSZ
+Last Date Modified: 9/26/2022
+
+Description:
+
+The write a console program that continuously takes in a number n from the console and outputs to
+the console the number of 1's that must be added to the positive integer n before the process
+above ends.
+
+*/
+
 #include <iostream>
-#include <Vector>
+#include <vector>
 using namespace std;
 
+/******************************************************************/
+// @brief: find the number of paths
+// @para: nRows: number of rows
+//		  nCols: number of cols
+// @ret: return total number of paths
+/******************************************************************/
 uint64_t numberGridPaths(unsigned int nRows, unsigned int nCols)
 {
-
     vector<vector<unsigned int>> maze;
     vector<unsigned int> vect;
 
