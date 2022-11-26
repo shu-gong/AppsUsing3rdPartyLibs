@@ -1,0 +1,17 @@
+Problem 2: OpenMP Analysis Report
+
+Matrix Size: 10*10
+Without OpenMP: 2.3-05es
+With OpenMP: 0.0057s
+
+Matrix Size: 100*100
+Without OpenMP: 0.016s
+With OpenMP: 0.014s
+
+Matrix Size: 1000*1000
+Without OpenMP: 26s
+With OpenMP: 5.6s
+
+Conclusion: 
+1. When the matrix size is larger than 100*100, using OpenMP is faster.
+2. Largest test matrix size is 1000*1000, the relative time is around 26s.
