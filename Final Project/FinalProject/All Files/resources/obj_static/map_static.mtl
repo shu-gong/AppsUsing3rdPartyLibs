@@ -1,0 +1,186 @@
+newmtl map_static:blinn1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd grads_texture.png
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 0.06
+newmtl map_static:lambert4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.36 0.36 0.36
+Tf 1.00 1.00 1.00
+map_Kd main_textures.png
+Ni 1.00
+newmtl map_static:lambert5SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.79 0.79 0.79
+map_Kd grads_texture.png
+Ni 1.00
+newmtl map_static:lambert11SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.48 0.48 0.48
+Tf 1.00 1.00 1.00
+map_Kd grass_stripes.png
+bump  -bm 1 grass_normal.png
+Ni 1.00
+newmtl map_static:lambert12SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.48 0.48 0.48
+Tf 1.00 1.00 1.00
+map_Kd grads_texture.png
+Ni 1.00
+newmtl map_static:lambert17SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.51 0.51 0.51
+Tf 1.00 1.00 1.00
+map_Kd side_grass_02.png
+Ni 1.00
+newmtl map_static:lambert18SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd full_set.png
+Ni 1.00
+newmtl map_static:phong1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.42 0.42 0.42
+Tf 1.00 1.00 1.00
+map_Kd wall_diffuse.png
+bump  -bm 1 wall_normal.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 22.91
+newmtl map_static1:blinn1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd grads_texture.png
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 0.06
+newmtl map_static1:lambert4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.36 0.36 0.36
+Tf 1.00 1.00 1.00
+map_Kd main_textures.png
+Ni 1.00
+newmtl map_static1:lambert5SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.79 0.79 0.79
+map_Kd grads_texture.png
+Ni 1.00
+newmtl map_static1:lambert11SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.48 0.48 0.48
+Tf 1.00 1.00 1.00
+map_Kd grass_stripes.png
+bump  -bm 1 grass_normal.png
+Ni 1.00
+newmtl map_static1:lambert12SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.48 0.48 0.48
+Tf 1.00 1.00 1.00
+map_Kd grads_texture.png
+Ni 1.00
+newmtl map_static1:lambert17SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.51 0.51 0.51
+Tf 1.00 1.00 1.00
+map_Kd side_grass_02.png
+Ni 1.00
+newmtl map_static1:lambert18SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd full_set.png
+Ni 1.00
+newmtl map_static1:phong1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.42 0.42 0.42
+Tf 1.00 1.00 1.00
+map_Kd wall_diffuse.png
+bump  -bm 1 wall_normal.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 22.91
+newmtl map_static2:blinn1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd grads_texture.png
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 0.06
+newmtl map_static2:lambert4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.36 0.36 0.36
+Tf 1.00 1.00 1.00
+map_Kd main_textures.png
+Ni 1.00
+newmtl map_static2:lambert5SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.79 0.79 0.79
+map_Kd grads_texture.png
+Ni 1.00
+newmtl map_static2:lambert11SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.48 0.48 0.48
+Tf 1.00 1.00 1.00
+map_Kd grass_stripes.png
+bump  -bm 1 grass_normal.png
+Ni 1.00
+newmtl map_static2:lambert12SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.48 0.48 0.48
+Tf 1.00 1.00 1.00
+map_Kd grads_texture.png
+Ni 1.00
+newmtl map_static2:lambert17SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.51 0.51 0.51
+Tf 1.00 1.00 1.00
+map_Kd side_grass_02.png
+Ni 1.00
+newmtl map_static2:lambert18SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd full_set.png
+Ni 1.00
+newmtl map_static2:phong1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.42 0.42 0.42
+Tf 1.00 1.00 1.00
+map_Kd wall_diffuse.png
+bump  -bm 1 wall_normal.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 22.91
